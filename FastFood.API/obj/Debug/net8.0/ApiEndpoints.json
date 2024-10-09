@@ -1,0 +1,18 @@
+[
+  {
+    "ContainingType": "FastFood.API.Controllers.ClienteController",
+    "Method": "IncluiCliente",
+    "RelativePath": "Cliente/IncluiCliente",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clienteIncluir",
+        "Type": "FastFood.API.Dtos.ClienteIncluir",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  }
+]
