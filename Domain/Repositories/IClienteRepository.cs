@@ -9,6 +9,13 @@ namespace Domain.Repositories
 {
     public interface IClienteRepository
     {
-        Task IncluiClienteAsync(Cliente cliente);
+        Task IncluiCliente(Cliente cliente);
+        Task EditaCliente(Cliente cliente);
+        Task RemoveCliente(Cliente cliente);
+
+        Task<Cliente> RecuperaClientePorId(Guid id);
+        Task<Cliente> RecuperaClientePorCPF(string cpf);
+
+        Task<List<Cliente>> RecuperaClientes();
     }
 }

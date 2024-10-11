@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\Application\\Application.csproj": {}
+    "C:\\Fiap\\Projetos\\FastFood\\Application\\Application.csproj": {}
   },
   "projects": {
-    "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\Application\\Application.csproj": {
+    "C:\\Fiap\\Projetos\\FastFood\\Application\\Application.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\Application\\Application.csproj",
+        "projectUniqueName": "C:\\Fiap\\Projetos\\FastFood\\Application\\Application.csproj",
         "projectName": "Application",
-        "projectPath": "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\Application\\Application.csproj",
-        "packagesPath": "C:\\Users\\tomvi\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\Application\\obj\\",
+        "projectPath": "C:\\Fiap\\Projetos\\FastFood\\Application\\Application.csproj",
+        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+        "outputPath": "C:\\Fiap\\Projetos\\FastFood\\Application\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\tomvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -29,8 +33,8 @@
           "net8.0": {
             "targetAlias": "net8.0",
             "projectReferences": {
-              "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\Domain\\Domain.csproj": {
-                "projectPath": "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\Domain\\Domain.csproj"
+              "C:\\Fiap\\Projetos\\FastFood\\Domain\\Domain.csproj": {
+                "projectPath": "C:\\Fiap\\Projetos\\FastFood\\Domain\\Domain.csproj"
               }
             }
           }
@@ -71,21 +75,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\Domain\\Domain.csproj": {
+    "C:\\Fiap\\Projetos\\FastFood\\Domain\\Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\Domain\\Domain.csproj",
+        "projectUniqueName": "C:\\Fiap\\Projetos\\FastFood\\Domain\\Domain.csproj",
         "projectName": "Domain",
-        "projectPath": "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\Domain\\Domain.csproj",
-        "packagesPath": "C:\\Users\\tomvi\\.nuget\\packages\\",
-        "outputPath": "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\Domain\\obj\\",
+        "projectPath": "C:\\Fiap\\Projetos\\FastFood\\Domain\\Domain.csproj",
+        "packagesPath": "C:\\Users\\andre\\.nuget\\packages\\",
+        "outputPath": "C:\\Fiap\\Projetos\\FastFood\\Domain\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\tomvi\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\andre\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -132,7 +140,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.400/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
