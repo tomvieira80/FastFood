@@ -9,3 +9,15 @@ C:\Projetos\FIAP\TechChallenge\FastFood\Domain\obj\Debug\net8.0\Domain.dll
 C:\Projetos\FIAP\TechChallenge\FastFood\Domain\obj\Debug\net8.0\refint\Domain.dll
 C:\Projetos\FIAP\TechChallenge\FastFood\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Projetos\FIAP\TechChallenge\FastFood\Domain\obj\Debug\net8.0\ref\Domain.dll
+C:\Fiap\Projetos\FastFood\Domain\obj\Debug\net8.0\Domain.dll
+C:\Fiap\Projetos\FastFood\Domain\obj\Debug\net8.0\Domain.pdb
+C:\Fiap\Projetos\FastFood\Domain\obj\Debug\net8.0\Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Fiap\Projetos\FastFood\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
+C:\Fiap\Projetos\FastFood\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
+C:\Fiap\Projetos\FastFood\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Fiap\Projetos\FastFood\Domain\obj\Debug\net8.0\Domain.sourcelink.json
+C:\Fiap\Projetos\FastFood\Domain\obj\Debug\net8.0\refint\Domain.dll
+C:\Fiap\Projetos\FastFood\Domain\bin\Debug\net8.0\Domain.deps.json
+C:\Fiap\Projetos\FastFood\Domain\bin\Debug\net8.0\Domain.dll
+C:\Fiap\Projetos\FastFood\Domain\bin\Debug\net8.0\Domain.pdb
+C:\Fiap\Projetos\FastFood\Domain\obj\Debug\net8.0\ref\Domain.dll

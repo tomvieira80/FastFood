@@ -1,16 +1,74 @@
 [
   {
     "ContainingType": "FastFood.API.Controllers.ClienteController",
-    "Method": "IncluiCliente",
-    "RelativePath": "Cliente/IncluiCliente",
+    "Method": "Altera",
+    "RelativePath": "Cliente/Altera",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "clienteIncluir",
-        "Type": "FastFood.API.Dtos.ClienteIncluir",
+        "Name": "clienteUpdate",
+        "Type": "FastFood.API.Dtos.ClienteUpdate",
         "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FastFood.API.Controllers.ClienteController",
+    "Method": "Inclui",
+    "RelativePath": "Cliente/Inclui",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clienteInsert",
+        "Type": "FastFood.API.Dtos.ClienteInsert",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FastFood.API.Controllers.ClienteController",
+    "Method": "RecuperaListagem",
+    "RelativePath": "Cliente/RecuperaListagem",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FastFood.API.Controllers.ClienteController",
+    "Method": "RecuperaPorCPF",
+    "RelativePath": "Cliente/RecuperaPorCPF",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cpf",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FastFood.API.Controllers.ClienteController",
+    "Method": "Remove",
+    "RelativePath": "Cliente/Remove",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
       }
     ],
     "ReturnTypes": []
