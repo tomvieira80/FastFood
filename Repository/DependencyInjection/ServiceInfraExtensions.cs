@@ -1,7 +1,5 @@
 ﻿using Domain.Repositories;
-using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
-using Repository.Context;
 
 namespace Repository.DependencyInjection
 {
