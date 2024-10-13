@@ -1,15 +1,78 @@
 [
   {
     "ContainingType": "FastFood.API.Controllers.ClienteController",
-    "Method": "IncluiCliente",
-    "RelativePath": "Cliente/IncluiCliente",
+    "Method": "Alterar",
+    "RelativePath": "Cliente/Alterar",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "clienteUpdate",
+        "Type": "FastFood.API.Dtos.ClienteUpdate",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FastFood.API.Controllers.ClienteController",
+    "Method": "AtivarInativar",
+    "RelativePath": "Cliente/AtivarInativar",
+    "HttpMethod": "PATCH",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.Guid",
+        "IsRequired": false
+      },
+      {
+        "Name": "status",
+        "Type": "System.Boolean",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FastFood.API.Controllers.ClienteController",
+    "Method": "Incluir",
+    "RelativePath": "Cliente/Incluir",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "clienteIncluir",
-        "Type": "FastFood.API.Dtos.ClienteIncluir",
+        "Name": "clienteInsert",
+        "Type": "FastFood.API.Dtos.ClienteInsert",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FastFood.API.Controllers.ClienteController",
+    "Method": "RecuperarListagem",
+    "RelativePath": "Cliente/RecuperarListagem",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "FastFood.API.Controllers.ClienteController",
+    "Method": "RecuperarPorCPF",
+    "RelativePath": "Cliente/RecuperarPorCPF/{cpf}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "cpf",
+        "Type": "System.String",
         "IsRequired": true
       }
     ],

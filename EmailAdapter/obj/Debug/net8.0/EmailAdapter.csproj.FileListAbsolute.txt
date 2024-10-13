@@ -1,6 +1,16 @@
+C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\bin\Debug\net8.0\EmailAdapter.deps.json
+C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\bin\Debug\net8.0\EmailAdapter.dll
+C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\bin\Debug\net8.0\EmailAdapter.pdb
+C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\bin\Debug\net8.0\Domain.dll
+C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\bin\Debug\net8.0\Domain.pdb
 C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\obj\Debug\net8.0\EmailAdapter.csproj.AssemblyReference.cache
 C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\obj\Debug\net8.0\EmailAdapter.GeneratedMSBuildEditorConfig.editorconfig
 C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\obj\Debug\net8.0\EmailAdapter.AssemblyInfoInputs.cache
 C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\obj\Debug\net8.0\EmailAdapter.AssemblyInfo.cs
 C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\obj\Debug\net8.0\EmailAdapter.csproj.CoreCompileInputs.cache
 C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\obj\Debug\net8.0\EmailAdapter.sourcelink.json
+C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\obj\Debug\net8.0\EmailAda.E7F09BE0.Up2Date
+C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\obj\Debug\net8.0\EmailAdapter.dll
+C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\obj\Debug\net8.0\refint\EmailAdapter.dll
+C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\obj\Debug\net8.0\EmailAdapter.pdb
+C:\Projetos\FIAP\TechChallenge\FastFood\EmailAdapter\obj\Debug\net8.0\ref\EmailAdapter.dll

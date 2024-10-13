@@ -5,8 +5,8 @@ C:\Projetos\FIAP\TechChallenge\FastFood\Domain\obj\Debug\net8.0\Domain.Generated
 C:\Projetos\FIAP\TechChallenge\FastFood\Domain\obj\Debug\net8.0\Domain.AssemblyInfoInputs.cache
 C:\Projetos\FIAP\TechChallenge\FastFood\Domain\obj\Debug\net8.0\Domain.AssemblyInfo.cs
 C:\Projetos\FIAP\TechChallenge\FastFood\Domain\obj\Debug\net8.0\Domain.csproj.CoreCompileInputs.cache
+C:\Projetos\FIAP\TechChallenge\FastFood\Domain\obj\Debug\net8.0\Domain.sourcelink.json
 C:\Projetos\FIAP\TechChallenge\FastFood\Domain\obj\Debug\net8.0\Domain.dll
 C:\Projetos\FIAP\TechChallenge\FastFood\Domain\obj\Debug\net8.0\refint\Domain.dll
 C:\Projetos\FIAP\TechChallenge\FastFood\Domain\obj\Debug\net8.0\Domain.pdb
 C:\Projetos\FIAP\TechChallenge\FastFood\Domain\obj\Debug\net8.0\ref\Domain.dll
-C:\Projetos\FIAP\TechChallenge\FastFood\Domain\obj\Debug\net8.0\Domain.sourcelink.json
