@@ -3,6 +3,9 @@ using Domain.Models;
 using FastFood.API.Dtos;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore.Metadata.Internal;
+using System.Globalization;
+using Domain.Validators;
+using System.ComponentModel.DataAnnotations;
 
 
 namespace FastFood.API.Controllers
@@ -12,64 +15,84 @@ namespace FastFood.API.Controllers
     public class ClienteController : Controller
     {
         private readonly IClienteService _clienteService;
+        private readonly IClienteValidator _clienteValidator;
 
-        public ClienteController(IClienteService clienteService) 
+        public ClienteController(IClienteService clienteService, IClienteValidator validator) 
         {
             _clienteService = clienteService;
+            _clienteValidator = validator;
         }
 
         [HttpPost]
-        public async Task<IActionResult> Inclui(Dtos.ClienteInsert clienteInsert)
-        {
-            var cliente = new Domain.Models.Cliente
+        public async Task<IActionResult> Incluir(Dtos.ClienteInsert clienteInsert)
+        {   
+            var cliente = new Cliente
             {
-                Id = Guid.NewGuid(),
+                IdCliente = Guid.NewGuid(),
                 Nome = clienteInsert.Nome,
                 CPF = clienteInsert.CPF,
                 Email = clienteInsert.Email,
-                DataCadastro = DateTime.Now
+                DataAlteracao = DateTime.Now,
+                Ativo = true
             };
 
-            await _clienteService.IncluiCliente(cliente);
+            if (!_clienteValidator.Validate(cliente, out var errors))
+            {
+                return BadRequest(new { Errors = errors });
+            }
+
+            await _clienteService.IncluiClienteAsync(cliente);
 
             return Ok(cliente);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Altera(Dtos.ClienteUpdate clienteUpdate)
+        [HttpPut("{id:Guid}")]
+        public async Task<IActionResult> Alterar(Guid id,ClienteUpdate clienteUpdate)
         {
-            var cliente = new Domain.Models.Cliente
+            var cliente = new Cliente
             {
-                Id = clienteUpdate.Id, 
+                IdCliente = id, 
                 Nome = clienteUpdate.Nome,
                 CPF = clienteUpdate.CPF,
                 Email = clienteUpdate.Email,
-                DataCadastro = DateTime.Now
+                DataAlteracao = DateTime.Now,
+                Ativo = clienteUpdate.Ativo
             };
 
-            await _clienteService.IncluiCliente(cliente);
+            if (!_clienteValidator.Validate(cliente, out var errors))
+            {
+                return BadRequest(new { Errors = errors });
+            }
+
+            await _clienteService.EditaClienteAsync(cliente);
 
             return Ok(cliente);
         }
 
-        [HttpPost]
-        public async Task<IActionResult> Remove(Guid id)
+        [HttpPatch("{id:Guid}/{status:bool}")]
+        public async Task<IActionResult> AtivarInativar(Guid id, bool status)
         {
-            await _clienteService.RemoveCliente(id);
+            await _clienteService.AtivarInativarClienteAsync(id, status);
 
-            return Ok(null);
+            return Ok(new {mensagem = "Operação realizada com sucesso."});
+        }
+
+        [HttpGet("{cpf}")]
+        public async Task<IActionResult> RecuperarPorCPF(string cpf)
+        {
+            var cliente = await _clienteService.RecuperaClientePorCPFAsync(cpf);
+
+            if (cliente == null) {
+                return NotFound("Cliente não encontrado.");
+            }
+
+            return Ok(cliente);
         }
 
         [HttpGet]
-        public async Task<IActionResult> RecuperaPorCPF(string cpf)
+        public async Task<IActionResult> RecuperarListagem()
         {
-            return Ok(await _clienteService.RecuperaClientePorCPF(cpf));
-        }
-
-        [HttpGet]
-        public async Task<IActionResult> RecuperaListagem()
-        {
-            return Ok(await _clienteService.RecuperaListagemCliente());
+            return Ok(await _clienteService.RecuperaListagemClienteAsync());
         }
     }
 }

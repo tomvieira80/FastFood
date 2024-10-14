@@ -20,40 +20,36 @@ namespace Application.Services
 
        
 
-        public async Task IncluiCliente(Cliente cliente)
+        public async Task IncluiClienteAsync(Cliente cliente)
         {
             if (cliente == null)
                 throw new ArgumentNullException(nameof(cliente));
 
-            await _clienteRepository.IncluiCliente(cliente);
+            await _clienteRepository.IncluiClienteAsync(cliente);
         }
 
-        public async Task EditaCliente(Cliente cliente)
+        public async Task EditaClienteAsync(Cliente cliente)
         {
             if (cliente == null)
                 throw new ArgumentNullException(nameof(cliente));
 
-            await _clienteRepository.EditaCliente(cliente);
+            await _clienteRepository.EditaClienteAsync(cliente);
         }
 
-        public async Task RemoveCliente(Guid id)
+        public async Task AtivarInativarClienteAsync(Guid id, bool status)
         {
-            Cliente cliente = await _clienteRepository.RecuperaClientePorId(id);
-           
-            if (cliente == null)
-                throw new ArgumentNullException(nameof(cliente));
-
-            await _clienteRepository.RemoveCliente(cliente);
+            
+            await _clienteRepository.AtivarInativarClienteAsync(id, status);
         }
 
-        public async Task<Cliente> RecuperaClientePorCPF(string cpf)
+        public async Task<Cliente> RecuperaClientePorCPFAsync(string cpf)
         {
-            return await _clienteRepository.RecuperaClientePorCPF(cpf);
+            return await _clienteRepository.RecuperaClientePorCPFAsync(cpf);
         }
 
-        public async Task<List<Cliente>> RecuperaListagemCliente()
+        public async Task<List<Cliente>> RecuperaListagemClienteAsync()
         {
-            return await _clienteRepository.RecuperaClientes();
+            return await _clienteRepository.RecuperaClientesAsync();
 
         }
     }

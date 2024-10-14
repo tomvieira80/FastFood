@@ -9,7 +9,7 @@ namespace Domain.Services
         /// </summary>
         /// <param name="cliente">Objeto Cliente</param>
         //// <exception cref="ValidationCoreException"></exception>
-        Task IncluiCliente(Cliente cliente);
+        Task IncluiClienteAsync(Cliente cliente);
 
 
         /// <summary>
@@ -17,26 +17,27 @@ namespace Domain.Services
         /// </summary>
         /// <param name="cliente">Objeto Cliente</param>
         //// <exception cref="ValidationCoreException"></exception>
-        Task EditaCliente(Cliente cliente);
+        Task EditaClienteAsync(Cliente cliente);
 
         /// <summary>
         /// Remove um Cliente
         /// </summary>
-        /// <param name="cliente">Objeto Cliente</param>
+        /// <param name="id">Guid</param>
+        /// <param name="status">bool</param>
         //// <exception cref="ValidationCoreException"></exception>
-        Task RemoveCliente(Guid id);
+        Task AtivarInativarClienteAsync(Guid id, bool status);
 
         /// <summary>
         /// Recupera um Cliente pelo CPF
         /// </summary>
         /// <param name="CPF">Objeto Cliente</param>
         //// <exception cref="ValidationCoreException"></exception>
-        Task<Cliente> RecuperaClientePorCPF(string cpf);
+        Task<Cliente> RecuperaClientePorCPFAsync(string cpf);
 
         /// <summary>
         /// Recupera listagem de  Clientes        
         /// /// </summary>
         //// <exception cref="ValidationCoreException"></exception>
-        Task<List<Cliente>> RecuperaListagemCliente();
+        Task<List<Cliente>> RecuperaListagemClienteAsync();
     }
 }
