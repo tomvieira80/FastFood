@@ -14,7 +14,6 @@ namespace Domain.Repositories
         Task AtivarInativarClienteAsync(Guid id, bool status);
         Task<Cliente> RecuperaClientePorIdAsync(Guid id);
         Task<Cliente> RecuperaClientePorCPFAsync(string cpf);
-
         Task<List<Cliente>> RecuperaClientesAsync();
     }
 }

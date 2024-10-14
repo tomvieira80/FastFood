@@ -55,7 +55,7 @@ namespace Repository
 
         public async Task<Cliente> RecuperaClientePorIdAsync(Guid id)
         {
-            Cliente cliente = _postgresContext.Cliente.Where(c => c.IdCliente.Equals(id)).FirstOrDefault();
+            Cliente cliente = await _postgresContext.Cliente.Where(c => c.IdCliente.Equals(id)).FirstOrDefaultAsync();
 
             if (cliente == null)
                 throw new ArgumentNullException(nameof(cliente));
@@ -65,15 +65,17 @@ namespace Repository
 
         public async Task<Cliente> RecuperaClientePorCPFAsync(string cpf)
         {
-            var cliente =await _postgresContext.Cliente.Where(c => c.CPF.Equals(cpf)).FirstOrDefaultAsync();
-           
+            var cliente = await _postgresContext.Cliente.Where(c => c.CPF.Equals(cpf)).FirstOrDefaultAsync();
+
+            if (cliente == null)
+                throw new ArgumentNullException(nameof(cliente));
+
             return cliente;
         }
 
         public async Task<List<Cliente>> RecuperaClientesAsync()
         {
-            List<Cliente> clientes =
-                 _postgresContext.Cliente.ToList();
+            List<Cliente> clientes = await _postgresContext.Cliente.ToListAsync();
 
             if (clientes == null)
                 throw new ArgumentNullException(nameof(clientes));

@@ -48,3 +48,6 @@ C:\Projetos\FIAP\TechChallenge\FastFood\Repository\obj\Debug\net8.0\Repository.d
 C:\Projetos\FIAP\TechChallenge\FastFood\Repository\obj\Debug\net8.0\refint\Repository.dll
 C:\Projetos\FIAP\TechChallenge\FastFood\Repository\obj\Debug\net8.0\Repository.pdb
 C:\Projetos\FIAP\TechChallenge\FastFood\Repository\obj\Debug\net8.0\ref\Repository.dll
+C:\Projetos\FIAP\TechChallenge\FastFood\Repository\bin\Debug\net8.0\xunit.runner.visualstudio.testadapter.dll
+C:\Projetos\FIAP\TechChallenge\FastFood\Repository\bin\Debug\net8.0\xunit.runner.reporters.netcoreapp10.dll
+C:\Projetos\FIAP\TechChallenge\FastFood\Repository\bin\Debug\net8.0\xunit.runner.utility.netcoreapp10.dll
