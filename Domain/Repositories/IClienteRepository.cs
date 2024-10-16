@@ -15,5 +15,6 @@ namespace Domain.Repositories
         Task<Cliente> RecuperaClientePorIdAsync(Guid id);
         Task<Cliente> RecuperaClientePorCPFAsync(string cpf);
         Task<List<Cliente>> RecuperaClientesAsync();
+        bool CPFJaCadastrado(string cpf);
     }
 }

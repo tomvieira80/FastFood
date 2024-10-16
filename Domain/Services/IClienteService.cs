@@ -20,7 +20,7 @@ namespace Domain.Services
         Task EditaClienteAsync(Cliente cliente);
 
         /// <summary>
-        /// Remove um Cliente
+        /// Ativa ou Inativa um Cliente
         /// </summary>
         /// <param name="id">Guid</param>
         /// <param name="status">bool</param>

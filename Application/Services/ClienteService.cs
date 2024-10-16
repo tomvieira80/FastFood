@@ -12,13 +12,15 @@ namespace Application.Services
     public class ClienteService : IClienteService
     {
         private readonly IClienteRepository _clienteRepository;
+        private readonly IEmailService _emailAdapter;
 
-        public ClienteService(IClienteRepository clienteRepository) 
-        { 
-            _clienteRepository = clienteRepository; 
+        public ClienteService(IClienteRepository clienteRepository, IEmailService emailAdapter)
+        {
+            _clienteRepository = clienteRepository;
+            _emailAdapter = emailAdapter;
         }
 
-       
+
 
         public async Task IncluiClienteAsync(Cliente cliente)
         {
@@ -26,6 +28,8 @@ namespace Application.Services
                 throw new ArgumentNullException(nameof(cliente));
 
             await _clienteRepository.IncluiClienteAsync(cliente);
+            _emailAdapter.SendEmail("fastfood@gmail.com", cliente.Email, "Cliente cadastrado com sucesso", "Seu Cadastro foi realizado com sucesso.");
+          
         }
 
         public async Task EditaClienteAsync(Cliente cliente)
@@ -34,6 +38,7 @@ namespace Application.Services
                 throw new ArgumentNullException(nameof(cliente));
 
             await _clienteRepository.EditaClienteAsync(cliente);
+            _emailAdapter.SendEmail("fastfood@gmail.com", cliente.Email, "Cliente alterado com sucesso", "Seu Cadastro foi alterado com sucesso.");
         }
 
         public async Task AtivarInativarClienteAsync(Guid id, bool status)

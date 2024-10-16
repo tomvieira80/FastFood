@@ -1,11 +1,8 @@
-﻿using Domain.Services;
-using Domain.Models;
+﻿using Domain.Models;
+using Domain.Services;
+using Domain.Validators;
 using FastFood.API.Dtos;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore.Metadata.Internal;
-using System.Globalization;
-using Domain.Validators;
-using System.ComponentModel.DataAnnotations;
 
 
 namespace FastFood.API.Controllers
@@ -24,7 +21,7 @@ namespace FastFood.API.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Incluir(Dtos.ClienteInsert clienteInsert)
+        public async Task<IActionResult> Incluir(ClienteInsert clienteInsert)
         {   
             var cliente = new Cliente
             {
@@ -36,7 +33,7 @@ namespace FastFood.API.Controllers
                 Ativo = true
             };
 
-            if (!_clienteValidator.Validate(cliente, out var errors))
+            if (!_clienteValidator.Validate(cliente, true, out var errors))
             {
                 return BadRequest(new { Errors = errors });
             }
@@ -59,7 +56,7 @@ namespace FastFood.API.Controllers
                 Ativo = clienteUpdate.Ativo
             };
 
-            if (!_clienteValidator.Validate(cliente, out var errors))
+            if (!_clienteValidator.Validate(cliente, false, out var errors))
             {
                 return BadRequest(new { Errors = errors });
             }

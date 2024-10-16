@@ -1,4 +1,5 @@
 ﻿using Domain.Models;
+using Domain.Repositories;
 using Domain.Validators;
 using System;
 using System.Collections.Generic;
@@ -11,7 +12,13 @@ namespace Application.Validators
 {
     public class ClienteValidator : IClienteValidator
     {
-        public bool Validate(Cliente cliente, out List<string> errors)
+        private readonly IClienteRepository _clienteRepository;
+
+        public ClienteValidator(IClienteRepository clienteRepository) 
+        {
+            _clienteRepository = clienteRepository;
+        }
+        public bool Validate(Cliente cliente, bool novoCliente, out List<string> errors)
         {
             errors = new List<string>();
 
@@ -20,6 +27,10 @@ namespace Application.Validators
 
             if (!IsValidCPF(cliente.CPF))
                 errors.Add("CPF inválido, deve conter apenas números e 9 posições.");
+
+            if(novoCliente)
+                if (IsCPFJaCadastrado(cliente.CPF))
+                    errors.Add("CPF já cadastrado na base.");
 
             if (!IsValidEmail(cliente.Email))
                 errors.Add("Email inválido.");
@@ -36,6 +47,16 @@ namespace Application.Validators
 
             var regex = new Regex(@"^\d{9,}$");
             return regex.IsMatch(cpf);
+        }
+
+        private bool IsCPFJaCadastrado(string cpf)
+        {
+            if (string.IsNullOrWhiteSpace(cpf))
+                return false;
+
+            var jaCadastrado =  _clienteRepository.CPFJaCadastrado(cpf);           
+
+            return jaCadastrado;
         }
 
         private bool IsValidEmail(string email)

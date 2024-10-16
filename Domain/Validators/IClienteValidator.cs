@@ -4,6 +4,6 @@ namespace Domain.Validators
 {
     public interface IClienteValidator
     {
-        bool Validate(Cliente cliente, out List<string> errors);
+        bool Validate(Cliente cliente, bool novoCliente, out List<string> errors);
     }
 }

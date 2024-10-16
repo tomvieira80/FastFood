@@ -2,11 +2,6 @@
 using Domain.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Repository.Context;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Repository
 {
@@ -48,6 +43,7 @@ namespace Repository
                 throw new ArgumentNullException(nameof(cliente));
 
             cliente.Ativo = status;
+            cliente.DataAlteracao = DateTime.Now;
 
             _postgresContext.Cliente.Update(cliente);
             await _postgresContext.SaveChangesAsync();
@@ -57,8 +53,8 @@ namespace Repository
         {
             Cliente cliente = await _postgresContext.Cliente.Where(c => c.IdCliente.Equals(id)).FirstOrDefaultAsync();
 
-            if (cliente == null)
-                throw new ArgumentNullException(nameof(cliente));
+            //if (cliente == null)
+            //    throw new ArgumentNullException(nameof(cliente));
 
             return cliente;
         }
@@ -67,8 +63,8 @@ namespace Repository
         {
             var cliente = await _postgresContext.Cliente.Where(c => c.CPF.Equals(cpf)).FirstOrDefaultAsync();
 
-            if (cliente == null)
-                throw new ArgumentNullException(nameof(cliente));
+            //if (cliente == null)
+            //    throw new ArgumentNullException(nameof(cliente));
 
             return cliente;
         }
@@ -77,10 +73,12 @@ namespace Repository
         {
             List<Cliente> clientes = await _postgresContext.Cliente.ToListAsync();
 
-            if (clientes == null)
-                throw new ArgumentNullException(nameof(clientes));
-
             return clientes;
+        }
+
+        public bool CPFJaCadastrado(string cpf)
+        {
+            return _postgresContext.Cliente.Where(c => c.CPF.Equals(cpf)).Any();
         }
     }
 }

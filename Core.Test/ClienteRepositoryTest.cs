@@ -67,8 +67,7 @@ namespace Core.Test
 
             _mockRepo.Setup(repo => repo.RecuperaClientePorCPFAsync(It.IsAny<string>())).ReturnsAsync(_cliente);
 
-            var result = await _mockRepo.Object.RecuperaClientePorCPFAsync("12345678900");
-                   
+            var result = await _mockRepo.Object.RecuperaClientePorCPFAsync("12345678900");                   
             
             Console.WriteLine(JsonSerializer.Serialize(result));
            
@@ -96,9 +95,9 @@ namespace Core.Test
         [Fact]
         public async Task ValidarClienteAsync_Deve_Validar_Dados_cliente()
         {
-            _mockValidator.Setup(repo => repo.Validate(It.IsAny<Cliente>(), out It.Ref<List<string>>.IsAny)).Returns(true);
+            _mockValidator.Setup(repo => repo.Validate(It.IsAny<Cliente>(), It.IsAny<bool>(), out It.Ref<List<string>>.IsAny)).Returns(true);
 
-            var validarCliente = _mockValidator.Object.Validate(_cliente, out var errors);
+            var validarCliente = _mockValidator.Object.Validate(_cliente, true, out var errors);
 
             Console.WriteLine(JsonSerializer.Serialize(validarCliente));
 
@@ -108,7 +107,7 @@ namespace Core.Test
         [Fact]
         public async Task ValidarClienteAsync_Com_Erro_Validar_Dados_cliente()
         {
-            _mockValidator.Setup(repo => repo.Validate(It.IsAny<Cliente>(), out It.Ref<List<string>>.IsAny)).Returns(false);
+            _mockValidator.Setup(repo => repo.Validate(It.IsAny<Cliente>(), It.IsAny<bool>(), out It.Ref<List<string>>.IsAny)).Returns(false);
 
             var cliente = new Cliente
             {
@@ -120,7 +119,7 @@ namespace Core.Test
                 Ativo = true
             };
 
-            var validarCliente = _mockValidator.Object.Validate(cliente, out var errors);
+            var validarCliente = _mockValidator.Object.Validate(cliente, true, out var errors);
 
             Console.WriteLine(JsonSerializer.Serialize(validarCliente));
 

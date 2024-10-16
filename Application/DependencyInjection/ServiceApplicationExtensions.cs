@@ -11,8 +11,12 @@ namespace Application.DependencyInjection
     {
         public static IServiceCollection AddApplicationService(this IServiceCollection services) 
         {
-            services.AddTransient<IClienteService, ClienteService>();
+            services.AddScoped<IClienteService, ClienteService>();
+            services.AddScoped<ICategoriaService, CategoriaService>();
             services.AddScoped<IClienteValidator, ClienteValidator>();
+            services.AddScoped<IPedidoStatusService, PedidoStatusService>();
+            services.AddScoped<IProdutoService, ProdutoService>();
+            services.AddScoped<IProdutoValidator, ProdutoValidator>();
             return services;
         }
     }
