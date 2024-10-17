@@ -7,7 +7,7 @@ public class Pedido
     [Key]
     public Guid IdPedido { get; set; }
 
-    public Guid IdCliente { get; set; }
+    public Guid? IdCliente { get; set; }
 
     [ForeignKey("IdCliente")]
     public Cliente Cliente { get; set; }

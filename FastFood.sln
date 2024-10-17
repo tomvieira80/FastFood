@@ -21,7 +21,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "3 Test", "3 Test", "{A94735
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Core.Test", "Core.Test\Core.Test.csproj", "{F73CA2D0-822E-4236-A8EE-0D615E50A035}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EmailAdapter", "EmailAdapter\EmailAdapter.csproj", "{C87565F3-F2B3-4300-8243-E922F0745C5A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "EmailAdapter", "EmailAdapter\EmailAdapter.csproj", "{C87565F3-F2B3-4300-8243-E922F0745C5A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PagamentoAdapter", "PagamentoAdapter\PagamentoAdapter.csproj", "{5EB3E21F-5AB1-455B-B08B-D39D53DD3323}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{C87565F3-F2B3-4300-8243-E922F0745C5A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C87565F3-F2B3-4300-8243-E922F0745C5A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C87565F3-F2B3-4300-8243-E922F0745C5A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5EB3E21F-5AB1-455B-B08B-D39D53DD3323}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5EB3E21F-5AB1-455B-B08B-D39D53DD3323}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5EB3E21F-5AB1-455B-B08B-D39D53DD3323}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5EB3E21F-5AB1-455B-B08B-D39D53DD3323}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -64,6 +70,7 @@ Global
 		{26132362-4DC8-4FD0-85CF-EF9D004574BD} = {928790DC-D229-48A7-9E16-F54B0A586E28}
 		{F73CA2D0-822E-4236-A8EE-0D615E50A035} = {A9473536-9912-4820-A814-3ED7609FF6BB}
 		{C87565F3-F2B3-4300-8243-E922F0745C5A} = {928790DC-D229-48A7-9E16-F54B0A586E28}
+		{5EB3E21F-5AB1-455B-B08B-D39D53DD3323} = {928790DC-D229-48A7-9E16-F54B0A586E28}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0F411A3C-BE19-4B56-A62A-ACBAC0E7E785}

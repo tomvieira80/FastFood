@@ -943,6 +943,21 @@
           "bin/placeholder/EmailAdapter.dll": {}
         }
       },
+      "PagamentoAdapter/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v8.0",
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.1",
+          "Microsoft.Extensions.Logging": "8.0.1"
+        },
+        "compile": {
+          "bin/placeholder/PagamentoAdapter.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PagamentoAdapter.dll": {}
+        }
+      },
       "Repository/1.0.0": {
         "type": "project",
         "framework": ".NETCoreApp,Version=v8.0",
@@ -2611,6 +2626,11 @@
       "path": "../EmailAdapter/EmailAdapter.csproj",
       "msbuildProject": "../EmailAdapter/EmailAdapter.csproj"
     },
+    "PagamentoAdapter/1.0.0": {
+      "type": "project",
+      "path": "../PagamentoAdapter/PagamentoAdapter.csproj",
+      "msbuildProject": "../PagamentoAdapter/PagamentoAdapter.csproj"
+    },
     "Repository/1.0.0": {
       "type": "project",
       "path": "../Repository/Repository.csproj",
@@ -2622,6 +2642,7 @@
       "Application >= 1.0.0",
       "EmailAdapter >= 1.0.0",
       "Microsoft.VisualStudio.Azure.Containers.Tools.Targets >= 1.21.0",
+      "PagamentoAdapter >= 1.0.0",
       "Repository >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.4.0"
     ]
@@ -2659,6 +2680,9 @@
             },
             "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\EmailAdapter\\EmailAdapter.csproj": {
               "projectPath": "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\EmailAdapter\\EmailAdapter.csproj"
+            },
+            "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\PagamentoAdapter\\PagamentoAdapter.csproj": {
+              "projectPath": "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\PagamentoAdapter\\PagamentoAdapter.csproj"
             },
             "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\Repository\\Repository.csproj": {
               "projectPath": "C:\\Projetos\\FIAP\\TechChallenge\\FastFood\\Repository\\Repository.csproj"

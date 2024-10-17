@@ -5,6 +5,7 @@ using Application.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
 using Repository.Context;
 using EmailAdapter.DependencyInjection;
+using PagamentoAdapter.DependencyInjection;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -16,6 +17,7 @@ builder.Services.AddDbContext<PostgresContext>(options => options.UseNpgsql(conn
 builder.Services.AddDataBasePostgresService();
 builder.Services.AddApplicationService();
 builder.Services.AddEmailService();
+builder.Services.AddPagamentoService();
 
 
 builder.Services.AddControllers();

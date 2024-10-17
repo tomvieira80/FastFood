@@ -11,6 +11,7 @@
           "Application": "1.0.0",
           "EmailAdapter": "1.0.0",
           "Microsoft.VisualStudio.Azure.Containers.Tools.Targets": "1.21.0",
+          "PagamentoAdapter": "1.0.0",
           "Repository": "1.0.0",
           "Swashbuckle.AspNetCore": "6.4.0"
         },
@@ -655,6 +656,19 @@
           }
         }
       },
+      "PagamentoAdapter/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Microsoft.Extensions.DependencyInjection": "8.0.1",
+          "Microsoft.Extensions.Logging": "8.0.1"
+        },
+        "runtime": {
+          "PagamentoAdapter.dll": {
+            "assemblyVersion": "1.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
       "Repository/1.0.0": {
         "dependencies": {
           "Core.Test": "1.0.0",
@@ -987,6 +1001,11 @@
       "sha512": ""
     },
     "EmailAdapter/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PagamentoAdapter/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

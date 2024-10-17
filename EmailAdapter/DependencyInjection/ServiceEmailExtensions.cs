@@ -1,5 +1,4 @@
-﻿using Domain.Repositories;
-using Domain.Services;
+﻿using Domain.Services;
 using EmailAdapter.Operations;
 using Microsoft.Extensions.DependencyInjection;
 

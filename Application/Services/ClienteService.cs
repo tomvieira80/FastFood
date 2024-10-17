@@ -21,7 +21,6 @@ namespace Application.Services
         }
 
 
-
         public async Task IncluiClienteAsync(Cliente cliente)
         {
             if (cliente == null)
@@ -50,6 +49,11 @@ namespace Application.Services
         public async Task<Cliente> RecuperaClientePorCPFAsync(string cpf)
         {
             return await _clienteRepository.RecuperaClientePorCPFAsync(cpf);
+        }
+
+        public async Task<Cliente> RecuperaClientePorIdAsync(Guid id)
+        {
+            return await _clienteRepository.RecuperaClientePorIdAsync(id);
         }
 
         public async Task<List<Cliente>> RecuperaListagemClienteAsync()

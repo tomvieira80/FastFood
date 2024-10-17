@@ -306,3 +306,5 @@ C:\Projetos\FIAP\TechChallenge\FastFood\FastFood.API\bin\Debug\net8.0\xunit.abst
 C:\Projetos\FIAP\TechChallenge\FastFood\FastFood.API\bin\Debug\net8.0\xunit.assert.dll
 C:\Projetos\FIAP\TechChallenge\FastFood\FastFood.API\bin\Debug\net8.0\xunit.core.dll
 C:\Projetos\FIAP\TechChallenge\FastFood\FastFood.API\bin\Debug\net8.0\xunit.execution.dotnet.dll
+C:\Projetos\FIAP\TechChallenge\FastFood\FastFood.API\bin\Debug\net8.0\PagamentoAdapter.dll
+C:\Projetos\FIAP\TechChallenge\FastFood\FastFood.API\bin\Debug\net8.0\PagamentoAdapter.pdb

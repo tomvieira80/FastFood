@@ -17,6 +17,9 @@ namespace Application.DependencyInjection
             services.AddScoped<IPedidoStatusService, PedidoStatusService>();
             services.AddScoped<IProdutoService, ProdutoService>();
             services.AddScoped<IProdutoValidator, ProdutoValidator>();
+            services.AddScoped<IPedidoService, PedidoService>();
+            services.AddScoped<IPedidoItemService, PedidoItemService>();
+            services.AddScoped<IPedidoItemValidator, PedidoItemValidator>();
             return services;
         }
     }

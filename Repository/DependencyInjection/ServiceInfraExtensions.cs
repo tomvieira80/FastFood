@@ -12,6 +12,8 @@ namespace Repository.DependencyInjection
             services.AddScoped<ICategoriaRepository, CategoriaRepository>();
             services.AddScoped<IPedidoStatusRepository, PedidoStatusRepository>();
             services.AddScoped<IProdutoRepository, ProdutoRepository>();
+            services.AddScoped<IPedidoRepository, PedidoRepository>();
+            services.AddScoped<IPedidoItemRepository, PedidoItemRepository>();
             return services;
         }
 
