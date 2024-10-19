@@ -120,7 +120,8 @@ namespace FastFood.API.Controllers
                     IdPedidoItem = item.IdPedidoItem,
                     IdProduto = item.IdProduto,
                     NomeProduto = produto.NomeProduto,
-                    Quantidade = item.Quantidade
+                    Quantidade = item.Quantidade,
+                    PrecoUnitario = item.Produto.Preco
                 });
 
             }

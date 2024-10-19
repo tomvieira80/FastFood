@@ -27,7 +27,7 @@ namespace FastFood.API.Controllers
                 return NotFound("Categoria não localizada");
             }
 
-            return Ok();
+            return Ok(categoria);
         }
 
         [HttpGet]

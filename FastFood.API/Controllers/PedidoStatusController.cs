@@ -18,7 +18,7 @@ namespace FastFood.API.Controllers
         {
             var status = await _statusService.RecuperaPedidoStatusPorIdAsync(id);
 
-            if (status != null) {
+            if (status == null) {
                 return NotFound("Status não localizado");            }
 
             return Ok(status);

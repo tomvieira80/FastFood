@@ -21,6 +21,8 @@ namespace FastFood.API.Dtos
             public string NomeProduto { get; set; }
            
             public int Quantidade { get; set; }
+
+            public float PrecoUnitario { get; set; }
         }
     }
 }
